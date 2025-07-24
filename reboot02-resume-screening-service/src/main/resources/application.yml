@@ -1,0 +1,28 @@
+server:
+  port: 8084
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: thecortexcrew@gmail.com
+#    password: SinclairZone0@DC
+    password: bgqp swif stpt uhjs
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  webflux:
+    base-path: /resume-screening-service
+  r2dbc:
+    url: r2dbc:cloudspanner://spanner.googleapis.com:443/projects/ltc-reboot25-team-39/instances/resume-screening-spanner-001/databases/job-candidate
+#  main:
+#    web-application-type: reactive
+#  cloud:
+#    gcp:
+#      spanner:
+#        instance-id: resume-screening-spanner-001
+#        database: job-candidate
+
+
