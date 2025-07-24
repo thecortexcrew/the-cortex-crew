@@ -1,0 +1,47 @@
+steps:
+  # Step 1: Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build', '-t', 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA', '.'
+      ]
+
+  # Step 2: Push Docker image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push', 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA'
+      ]
+  # Step 3: Deploy to GKE
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args:
+      - 'set'
+      - 'image'
+      - 'deployment/candidate-hiring-portal'
+      - 'candidate-hiring-portal=us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA'
+      - '--namespace=cortexcrew'
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=resume-api'
+
+images:
+  - 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA'
+#   # Step 3: Deploy to Cloud Run
+#   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#     entrypoint: gcloud
+#     args:
+#       [
+#         'run', 'deploy', 'candidate-hiring-portal',
+#         '--image', 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA',
+#         '--platform', 'managed',
+#         '--region', 'us-central1',
+#         '--allow-unauthenticated'
+#       ]
+
+# images:
+#   - 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/candidate-hiring-portal:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+serviceAccount: projects/ltc-reboot25-team-39/serviceAccounts/154305106622-compute@developer.gserviceaccount.com
