@@ -1,0 +1,32 @@
+steps:
+  # Step 1: Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build', '-t', 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resumeviewerapp:$COMMIT_SHA', '.'
+    ]
+
+  # Step 2: Push image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'push', 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resumeviewerapp:$COMMIT_SHA'
+    ]
+
+  # Step 3: Deploy to GKE
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args:
+      - 'set'
+      - 'image'
+      - 'deployment/resumeviewer-app'
+      - 'producer=us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resumeviewerapp:$COMMIT_SHA'
+      - '--namespace=cortexcrew'
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=resume-api'
+
+images:
+  - 'us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resumeviewerapp:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+serviceAccount: projects/ltc-reboot25-team-39/serviceAccounts/154305106622-compute@developer.gserviceaccount.com

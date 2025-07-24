@@ -1,0 +1,14 @@
+server:
+  port: 8085
+spring:
+  webflux:
+    base-path: /view-candidate
+#  r2dbc:
+#    url: r2dbc:cloudspanner://spanner.googleapis.com:443/projects/spanner-project-463607/instances/resume-screening-spanner-001/databases/job-candidate
+#  main:
+#    web-application-type: reactive
+  cloud:
+    gcp:
+      spanner:
+        instance-id: resume-screening-spanner-001
+        database: job-candidate

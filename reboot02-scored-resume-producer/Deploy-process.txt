@@ -1,0 +1,114 @@
+Step by Step process on gcloud Console:
+-----------------
+Step1: gcloud auth login <mailid>
+Step2: gcloud config set project '<project id>'
+Step3: Enable Kubernetes Engine API
+Step4: Create cluster using the below gcloud command 
+	command: gcloud container clusters create resume-api --region us-central1 --workload-pool=hireassist-465713.svc.id.goog --num-nodes=1 --machine-type=e2-medium --disk-type=pd-standard --disk-size=50
+	
+Step5: Navigate to iam-admin/serviceaccounts page
+Step6: Click create SA for creating a SA to authenticate with GKE and make Necessary changes to push to the bucket
+Step7: Afer adding Roles(Storage Admin, Storage Object Admin and Storage Object Creator) Ur SA will be now ready to Use 
+---
+Creating a cloud DNS
+---
+1)go to cloud domains
+2)Register a domain
+3)Once done go to the cloud dns (it should be acttive after it's registered)
+4)go to the created zone (mostly when you have registered the domain it pops up here with that same name)
+5) click on that and click add standard to create a record set
+6) Map the External ingress ip that was created with your ingress resource to map the ingress to cloud domain (kubectl get ingress will give you the created ingress resource with ip)
+7) Now you are done
+http://resumeassist.net/api/jobs
+----
+
+Docker Commands
+--
+Artifact Registry path:
+--
+us-central1-docker.pkg.dev/hireassist-465713/application-repo
+docker build -t <image-name> . 
+docker tag consumer-api:latest us-central1-docker.pkg.dev/hireassist-465713/application-repo/consumer-api:latest
+docker push us-central1-docker.pkg.dev/hireassist-465713/application-repo/consumer-api:latest
+
+Creating Ingress Resource inside the ns
+--
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
+
+Now Deploy the changes 
+--
+Creating GKE SA
+
+--
+
+kubectl create serviceaccount gke-bucket-authenticate
+
+k8's and google sa binding
+gcloud iam service-accounts add-iam-policy-binding priyanka-banerjee@hireassist-465713.iam.gserviceaccount.com --member="serviceAccount:hireassist-465713.svc.id.goog[default/gke-bucket-authenticate]" --role="roles/iam.workloadIdentityUser"
+kubectl annotate serviceaccount gke-bucket-authenticate --namespace default iam.gke.io/gcp-service-account=priyanka-banerjee@hireassist-465713.iam.gserviceaccount.com 
+
+To check the workload binding inside a pod
+--
+apt-get update && apt-get install -y curl 
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email
+
+Cloud Run React App changes
+----
+gcloud builds submit --tag us-central1-docker.pkg.dev/hireassist-465713/application-repo/candidate-hiring-portal -- build react image
+gcloud run deploy candidate-hiring-portal --image us-central1-docker.pkg.dev/hireassist-465713/application-repo/candidate-hiring-portal --platform managed --region us-central1 --allow-unauthenticated
+
+resume-proxy-api port Exposing:
+=----
+python3 -c "import os; print(open('/proc/1/cmdline').read().replace('\0', ' '))"
+--
+python app curl location
+--
+curl http://localhost:8083
+--
+to get python app routes
+--
+python3 -c "import app.main as m; print(m.app.routes)"
+
+some extra commands:
+---
+kubectl describe node gke-resume-api-default-pool-8c6923f3-7pbr - to get capacity of node
+kubectl top pod -- to get CPU and Memory utilization for pod
+requests = minimum guaranteed resources for the container.
+
+limits = maximum resources the container can use.
+
+Units:
+
+m = millicores (1000m = 1 CPU core)
+
+Memory in Mi (Mebibytes) or Gi (Gibibytes).
+
+grant cloud build permissions:
+---
+
+step1: 
+--
+Get the project number using below command:
+--------
+gcloud projects describe hireassist-465713 --format="value(projectNumber)"
+
+Step2:
+Get the cloud build SA to bind the roles of Artifact Registry and GKE
+-------
+CLOUDBUILD_SA="$PROJECT_NUMBER@cloudbuild.gserviceaccount.com" 
+
+Step3:
+---
+Command for Binding with Artifact Registry
+---
+gcloud projects add-iam-policy-binding hireassist-465713 --member="serviceAccount:154305106622@cloudbuild.gserviceaccount.com" --role="roles/artifactregistry.writer"
+
+Step4:
+----
+Command for Binding with GKE
+--
+gcloud projects add-iam-policy-binding hireassist-465713 --member="serviceAccount:154305106622@cloudbuild.gserviceaccount.com" --role="roles/container.developer"
+
+IF kubectl commands are used in cloud build then bind cloud build SA with GKE CLUSTER admin role
+---
+kubectl create clusterrolebinding cloudbuild-cluster-admin-binding --clusterrole=cluster-admin --user=serviceAccount:154305106622@cloudbuild.gserviceaccount.com

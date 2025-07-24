@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scoredresume-producer
+  labels:
+    app: scoredresume-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scoredresume-producer
+  template:
+    metadata:
+      labels:
+        app: scoredresume-producer
+    spec:
+      serviceAccountName: gke-bucket-authenticate
+      containers:
+        - name: scoredproducer
+          image: us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/scoreproducerapp:latest
+          ports:
+            - containerPort: 8082
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "192Mi"
+            limits:
+              cpu: "200m"
+              memory: "384Mi"
+          env:
+            - name: BOOTSTRAP_SERVERS
+              valueFrom:
+                secretKeyRef:
+                  name: producer-secrets
+                  key: BOOTSTRAP_SERVERS
+            - name: SASL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: producer-secrets
+                  key: SASL_USERNAME
+            - name: SASL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: producer-secrets
+                  key: SASL_PASSWORD
+            - name: BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: producer-secrets
+                  key: BUCKET_NAME

@@ -1,0 +1,47 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hireassist-producer-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    # nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: resumeassist.net
+      http:
+        paths:
+          - path: /api/jobs
+            pathType: Prefix
+            backend:
+              service:
+                name: hireassist-producer
+                port:
+                  number: 80
+          - path: /api/score
+            pathType: Prefix
+            backend:
+              service:
+                name: scoredresume-producer
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resume-proxy-api
+                port:
+                  number: 80
+          # - path: /
+          #   pathType: Prefix
+          #   backend:
+          #     service:
+          #       name: resumescreening-app
+          #       port:
+          #         number: 80
+          - path: /view-candidate
+            pathType: Prefix
+            backend:
+              service:
+                name: resumeviewer-app
+                port:
+                  number: 80

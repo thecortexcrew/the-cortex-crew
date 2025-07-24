@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: scoredresume-producer
+spec:
+  selector:
+    app: scoredresume-producer
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8082
+  type: ClusterIP

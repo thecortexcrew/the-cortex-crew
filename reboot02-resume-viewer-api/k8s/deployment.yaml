@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resumeviewer-app
+  labels:
+    app: resumeviewer-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resumeviewer-app
+  template:
+    metadata:
+      labels:
+        app: resumeviewer-app
+    spec:
+      serviceAccountName: gke-bucket-authenticate
+      containers:
+        - name: producer
+          image: us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resumeviewerapp:latest
+          ports:
+            - containerPort: 8085
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "320Mi"
+            limits:
+              cpu: "200m"
+              memory: "640Mi"
+          env:
+            - name: APP_PORT
+              value: "8085"
+          # env:
+          #   - name: BOOTSTRAP_SERVERS
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: BOOTSTRAP_SERVERS
+          #   - name: SASL_USERNAME
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: SASL_USERNAME
+          #   - name: SASL_PASSWORD
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: SASL_PASSWORD
+          #   - name: BUCKET_NAME
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: BUCKET_NAME
