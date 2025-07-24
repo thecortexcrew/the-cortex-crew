@@ -1,0 +1,46 @@
+{
+  "ApplicantId": "APP20250722-DEVOPS-NEGATIVE",
+  "IdentificationID": "ID20250722-DEVOPS-NEGATIVE",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1996-09-14",
+    "Education": [
+      {
+        "Degree": "B.Sc in Information Technology",
+        "Duration": "2014 — 2017",
+        "Ongoing": false,
+        "University": "XYZ College of IT"
+      }
+    ],
+    "EmailId": "basic.devops@example.com",
+    "Gender": "Male",
+    "MobileNo": "+91 9123456780",
+    "Name": "ROHAN MEHTA",
+    "SkillSets": "BASIC LINUX COMMANDS, SHELL SCRIPTING, JENKINS JOB MONITORING, BASIC DOCKER, GIT, SVN, POSTMAN, SIMPLE SQL QUERIES",
+    "WorkExp": [
+      {
+        "Company": "QuickFix IT Services",
+        "Duration": "April 2022 - Present",
+        "Project": [
+          {
+            "Name": "Jenkins Job Monitoring",
+            "Role": "Junior DevOps Support Engineer",
+            "Responsibilities": "Monitored Jenkins job failures and restarted jobs after fixing minor configuration issues; updated job parameters based on senior engineer instructions; maintained simple shell scripts for cleaning logs and temporary files."
+          }
+        ]
+      },
+      {
+        "Company": "NextServe Technologies",
+        "Duration": "Aug 2019 - March 2022",
+        "Project": [
+          {
+            "Name": "Production Support for Web Apps",
+            "Role": "DevOps Support Intern",
+            "Responsibilities": "Checked server resource utilization daily; raised tickets for disk space issues; manually restarted services when required; no involvement in CI/CD design or infrastructure automation."
+          }
+        ]
+      }
+    ],
+    "YearsOfExp": "5.0"
+  }
+}

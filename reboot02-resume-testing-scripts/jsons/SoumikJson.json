@@ -1,0 +1,121 @@
+{
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1987-03-15",
+    "Name": "Soumik Nath",
+    "EmailId": "soumik.nath822@gmail.com",
+    "MobileNo": "9748621059",
+    "Gender": "Male",
+    "YearsOfExp": "15",
+    "Education": [
+      {
+        "Degree": "B-Tech in Computer Science",
+        "Duration": "2006 — 2010",
+        "Ongoing": false,
+        "University": "Academy Of Technology"
+      }
+    ],
+    "SkillSets": [
+      "Microservices Architecture",
+      "Event-Driven Architecture",
+      "Domain-Driven Design (DDD)",
+      "REST & GraphQL API Design",
+      "Scalable System Design",
+      "High Availability Solutions",
+      "Multi-Region Disaster Recovery",
+      "Distributed Caching with Redis & Hazelcast",
+      "Java 8+",
+      "Spring Boot",
+      "Spring Cloud",
+      "Spring Security",
+      "Spring Batch",
+      "Hibernate",
+      "iBatis",
+      "GraphQL",
+      "Angular 8",
+      "JavaScript",
+      "CSS",
+      "Bootstrap",
+      "Docker",
+      "Kubernetes",
+      "OpenShift",
+      "Azure",
+      "Jenkins CI/CD",
+      "UDeploy",
+      "Sonar",
+      "Checkmarx",
+      "Veracode",
+      "TFS",
+      "Apache Kafka",
+      "MySQL",
+      "Oracle",
+      "SQL Server",
+      "MongoDB",
+      "OWASP",
+      "Cryptographic Implementations",
+      "Secure API Design",
+      "Zero-Downtime Deployment Strategies",
+      "Chaos Engineering",
+      "IntelliJ",
+      "Eclipse",
+      "STS",
+      "VS Code",
+      "Git",
+      "SVN",
+      "Rally",
+      "JIRA"
+    ],
+    "WorkExp": [
+      {
+        "Company": "Barclays",
+        "Duration": "Jan 2018 — Present",
+        "Project": [
+          {
+            "Role": "Senior Architect - Payment Merchant Services",
+            "Responsibilities": "Architecting enterprise-grade payment processing platforms for 30+ million daily transactions with high availability and zero downtime.\nDefined microservices decomposition strategy with bounded context modeling (DDD) and implemented API Gateway & Service Mesh using Istio.\nImplemented multi-region failover and disaster recovery strategy with active-active architecture in Azure.\nEstablished standardized GraphQL schema federation for merchant onboarding and payment orchestration modules.\nIntegrated distributed caching with Redis and Hazelcast to reduce transaction latency by 40%.\nLed adoption of event-driven messaging with Kafka Streams for real-time payment reconciliation.\nIntroduced advanced logging and monitoring using ELK & Prometheus/Grafana with proactive anomaly detection.\nReviewed and approved system design documents, conducted performance profiling, and optimized integration tests.\nLed security remediation for OWASP, Veracode, and PCI-DSS compliance.\nMentored 15+ engineers and conducted technical workshops on system scalability and cloud-native design.\nImplemented chaos engineering experiments to test resiliency under peak loads."
+          }
+        ]
+      },
+      {
+        "Company": "Optum (UnitedHealth Group)",
+        "Duration": "Jan 2015 — Dec 2017",
+        "Project": [
+          {
+            "Role": "Technical Lead / Full-Stack Architect",
+            "Responsibilities": "Owned end-to-end design of large-scale healthcare modules serving 20+ million members.\nRedesigned legacy monolith into microservices-based architecture following DDD principles.\nImplemented GraphQL gateway for federated data access across patient care and insurance modules.\nDesigned event-driven messaging patterns using Kafka for near-real-time patient data synchronization across distributed systems.\nIntroduced CQRS and event sourcing patterns for claims processing and patient history audits.\nGuided Azure Kubernetes Service (AKS)-based containerization with automated blue-green deployments.\nIntroduced Sonar & Checkmarx pipelines for continuous security scanning and code quality enforcement.\nMentored a team of 10 engineers on secure microservices patterns and GraphQL schema design."
+          }
+        ]
+      },
+      {
+        "Company": "Hitachi Consulting",
+        "Duration": "Jan 2014 — Dec 2014",
+        "Project": [
+          {
+            "Role": "Senior Consultant - Back-End Architect",
+            "Responsibilities": "Enhanced Lumada Data Catalog performance and redesigned data ingestion pipelines for big data analytics.\nProposed architectural improvements for batch-to-stream processing migration using Kafka & Spark.\nImplemented role-based access control (RBAC) and data encryption modules to comply with data privacy requirements."
+          }
+        ]
+      },
+      {
+        "Company": "Deloitte",
+        "Duration": "Jun 2010 — Dec 2013",
+        "Project": [
+          {
+            "Role": "Technology Analyst / Solution Architect (Progressive Roles)",
+            "Responsibilities": "Designed mortgage risk assessment microservices using Spring Boot and implemented scalable rule engines.\nStandardized OpenShift-based containerized deployments for banking applications.\nIntroduced automated performance benchmarking and fine-tuned APIs for low-latency transactions.\nDefined secure coding practices, mentored multiple teams, and contributed to enterprise architecture governance forums."
+          }
+        ]
+      },
+      {
+        "Company": "Capgemini India Pvt. Ltd.",
+        "Duration": "Aug 2010 — May 2012",
+        "Project": [
+          {
+            "Role": "Associate Consultant / Full-Stack Developer",
+            "Responsibilities": "Developed core banking and capital funding modules with Spring Boot, Angular, and Oracle.\nEstablished secure data transactions and API-based communication for account and payment management systems."
+          }
+        ]
+      }
+    ]
+  }
+}

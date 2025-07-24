@@ -1,0 +1,74 @@
+{
+    "ApplicantId": "APP20250722-503301AXM",
+    "IdentificationID": "ID20250722-503301YW2",
+    "Profile": {
+        "DateOfApplication": "2025-07-22",
+        "DateOfBirth": "1996-02-27",
+        "Education": [
+            {
+                "Degree": "B-Tech",
+                "Duration": "2015 — 2018",
+                "Ongoing": false,
+                "University": "Camellia Institute Of Technology, Madhyamgram"
+            },
+            {
+                "Degree": "Diploma",
+                "Duration": "2012 — 2015",
+                "Ongoing": false,
+                "University": "Women's Polytechnic Jodhpur Park"
+            },
+            {
+                "Degree": "Higher Secondary",
+                "Duration": "2010 — 2012",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            },
+            {
+                "Degree": "Secondary School",
+                "Duration": "2009 — 2010",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            }
+        ],
+        "EmailId": "priyankabanerjee206@gmail.com",
+        "Gender": "",
+        "MobileNo": "+91 8910983449",
+        "Name": "PRIYANKA BANERJEE",
+        "SkillSets": "CORE JAVA 8, SPRING BOOT, MICROSERVICES, REACTIVE PROGRAMMING, HIBERNATE, DATA STRUCTURES & ALGORITHMS, SQL, ANGULAR 8, REACT, REDUX, RXJS, TYPESCRIPT, BOOTSTRAP, MATERIAL UI, RESPONSIVE UI DESIGN, DOCKER, KUBERNETES, GCP, AZURE(AZ-900), CONFLUENT KAFKA, DATAFLOW, SPANNER, BIG QUERY, CLOUD RUN, CLOUD BUILD. TOOLS : ECLIPSE, STS, INTELLIJ, MYSQL WORKBENCH, MAVEN, BAMBOO, JENKINS, POSTMAN, VS CODE",
+        "WorkExp": [
+            {
+                "Company": "Lloyds Technology Centre",
+                "Duration": "January 2023 - Present",
+                "Project": [
+                    {
+                        "Name": "Co-Service Initiative & Cloud Modernization",
+                        "Responsibilities": "Actively involved in requirement gathering, end-to-end design, and co-implementation with the team for the Co-Service initiative. Built a high-performance Google Dataflow test-data generation job capable of loading billions of records into Spanner without primary key duplication, enabling performance and functionality testing of multiple pipelines. Migrated old monolith stack to reactive GCP-based Java Microservices using Spring Boot, ensuring sub-500ms response times. Enhanced logging with MDC and implemented reactive programming patterns. Contributed to frontend enhancements by reviewing and integrating responsive React components for admin dashboards. Extensively worked with GCP services: Dataflow, Spanner, GKE, TM-Vault, and participated in hackathons (Top-15) exploring Cloud Run, Cloud Build, Kafka Connect, and IAM policies.",
+                        "Role": "Software Developer"
+                    }
+                ]
+            },
+            {
+                "Company": "Infosys",
+                "Duration": "June 2019 — December 2022",
+                "Project": [
+                    {
+                        "Name": "WDP Core Banking",
+                        "Responsibilities": "Developed the Account Dashboard service as a Spring Boot Microservice, integrating with Hibernate and REST APIs for high-volume banking transactions. Designed and optimized the dashboard frontend using Angular 8, Bootstrap, and responsive design principles. Improved data rendering by adopting OnPush change detection and RxJS for state handling. Enhanced mortgage loan applications and added new banking modules with Core Java, Spring Data JPA, and Microservices best practices.",
+                        "Role": "Senior Systems Engineer"
+                    },
+                    {
+                        "Name": "Mesh Migration",
+                        "Responsibilities": "Migrated On-prem Kafka ecosystem to Confluent Cloud aligned with Azure. Containerized Microservices using Kubernetes, designed CI/CD pipelines, and followed secure DevOps practices.",
+                        "Role": "Senior Systems Engineer"
+                    },
+                    {
+                        "Name": "Strategic Billing",
+                        "Responsibilities": "Worked as a full-stack developer for enterprise billing dashboards. Created interactive UI using React (Redux for state management) and Angular modules. Built a Spring Boot-based Simulator with batch processing to generate real-time user data, improving system testing accuracy. Optimized UI performance with lazy loading and ensured cross-browser compatibility.",
+                        "Role": "Systems Engineer"
+                    }
+                ]
+            }
+        ],
+        "YearsOfExp": "5"
+    }
+}

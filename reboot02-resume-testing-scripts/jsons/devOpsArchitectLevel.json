@@ -1,0 +1,77 @@
+{
+  "ApplicantId": "APP20250722-DEVOPS-POSITIVE",
+  "IdentificationID": "ID20250722-DEVOPS-POSITIVE",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1988-04-10",
+    "Education": [
+      {
+        "Degree": "B.Tech in Computer Science",
+        "Duration": "2007 — 2011",
+        "Ongoing": false,
+        "University": "Indian Institute of Technology"
+      }
+    ],
+    "EmailId": "devops.architect@example.com",
+    "Gender": "Male",
+    "MobileNo": "+91 9000000000",
+    "Name": "RAHUL SHARMA",
+    "SkillSets": "DEVOPS STRATEGY, INFRASTRUCTURE AS CODE (TERRAFORM), CLOUDFORMATION, AWS, AZURE, GCP, CI/CD PIPELINE DESIGN, KUBERNETES CLUSTER MANAGEMENT, DOCKER, PROMETHEUS, GRAFANA, ANSIBLE, PYTHON, GITOPS, HELM CHARTS, SECURITY COMPLIANCE, COST OPTIMIZATION, CHAOS ENGINEERING, SERVICE MESH (ISTIO), FINOPS PRACTICES",
+    "WorkExp": [
+      {
+        "Company": "Global FinTech Solutions",
+        "Duration": "Jan 2021 - Present",
+        "Project": [
+          {
+            "Name": "Multi-Cloud CI/CD Orchestration",
+            "Role": "Lead DevOps Architect",
+            "Responsibilities": "Designed and implemented a unified CI/CD strategy for 200+ microservices across AWS and GCP using GitOps principles; established automated infrastructure provisioning with Terraform and Helm; improved deployment frequency by 60% while reducing failure rates through canary and blue-green deployments; led a team of 8 DevOps engineers ensuring security compliance and cost optimization."
+          },
+          {
+            "Name": "FinOps & Cost Optimization Framework",
+            "Role": "Lead DevOps Architect",
+            "Responsibilities": "Introduced FinOps practices across multi-cloud environments reducing infrastructure costs by 25%; implemented automated cost dashboards with real-time alerts; defined policies for rightsizing Kubernetes nodes and scaling non-critical workloads during off-peak hours."
+          },
+          {
+            "Name": "Enterprise Service Mesh Implementation",
+            "Role": "Lead DevOps Architect",
+            "Responsibilities": "Integrated Istio-based service mesh to manage traffic routing, observability, and security between 100+ microservices; implemented mutual TLS for secure inter-service communication; reduced latency by optimizing routing policies and enabling circuit breaking patterns."
+          }
+        ]
+      },
+      {
+        "Company": "TechNova Systems",
+        "Duration": "May 2017 - Dec 2020",
+        "Project": [
+          {
+            "Name": "Cloud Infrastructure Automation",
+            "Role": "Senior DevOps Engineer",
+            "Responsibilities": "Architected Kubernetes-based infrastructure for high-traffic applications; automated environment creation using Ansible and Terraform; set up end-to-end monitoring with Prometheus and Grafana achieving 99.99% uptime; collaborated with development teams to shift left on security and reduce release cycle time by 40%."
+          },
+          {
+            "Name": "Disaster Recovery & Chaos Engineering",
+            "Role": "Senior DevOps Engineer",
+            "Responsibilities": "Designed disaster recovery strategy for critical financial services; implemented cross-region failover on AWS with RTO < 15 mins; introduced chaos engineering experiments with Gremlin to identify weak points and improve resilience."
+          }
+        ]
+      },
+      {
+        "Company": "SoftEdge Pvt Ltd",
+        "Duration": "July 2011 - April 2017",
+        "Project": [
+          {
+            "Name": "Legacy to Cloud Migration",
+            "Role": "DevOps Engineer",
+            "Responsibilities": "Migrated monolithic applications from on-prem servers to AWS; containerized workloads with Docker; implemented basic Jenkins pipelines for automated builds and deployments; introduced log aggregation using ELK stack."
+          },
+          {
+            "Name": "Basic CI/CD Introduction",
+            "Role": "DevOps Engineer",
+            "Responsibilities": "Set up initial Jenkins pipelines for legacy Java applications; configured nightly builds and automated test runs; improved build success rate by 30% by optimizing Maven and Gradle configurations."
+          }
+        ]
+      }
+    ],
+    "YearsOfExp": "14.0"
+  }
+}

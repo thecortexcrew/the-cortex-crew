@@ -1,0 +1,78 @@
+{
+  "ApplicantId": "APP20250722-999999XYZ",
+  "IdentificationID": "ID20250722-NEGATIVE001",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1995-08-15",
+    "Education": [
+      {
+        "Degree": "B.Tech",
+        "Duration": "2015 — 2019",
+        "Ongoing": false,
+        "University": "ABC Institute of Technology"
+      },
+      {
+        "Degree": "Higher Secondary",
+        "Duration": "2013 — 2015",
+        "Ongoing": false,
+        "University": "XYZ Senior Secondary School"
+      }
+    ],
+    "EmailId": "dummydeveloper@gmail.com",
+    "Gender": "Female",
+    "MobileNo": "+91 9876543210",
+    "Name": "JANE DOE",
+    "SkillSets": "CORE JAVA, SPRING BOOT, JSP, SERVLETS, HTML, CSS, JAVASCRIPT, MYSQL, BASIC SQL QUERIES, POSTMAN, ECLIPSE, GIT",
+    "WorkExp": [
+      {
+        "Company": "Tech Solutions Pvt Ltd",
+        "Duration": "March 2022 - Present",
+        "Project": [
+          {
+            "Name": "Internal Admin Portal Maintenance",
+            "Role": "Software Developer",
+            "Responsibilities": "Involved in fixing UI bugs and making minor enhancements using JSP, Servlets, and MySQL; worked on basic CRUD operations; wrote unit test cases for existing modules; participated in daily support calls to resolve production issues."
+          },
+          {
+            "Name": "Employee Attendance Tracker Enhancement",
+            "Role": "Software Developer",
+            "Responsibilities": "Developed a small module to export attendance reports in CSV format; fixed existing pagination issues in the employee list page; coordinated with the QA team for verification."
+          }
+        ]
+      },
+      {
+        "Company": "NextGen Softwares",
+        "Duration": "July 2019 – February 2022",
+        "Project": [
+          {
+            "Name": "Inventory Management System Support",
+            "Role": "Junior Software Engineer",
+            "Responsibilities": "Provided L2/L3 support for the existing inventory management system; analyzed logs to troubleshoot issues; raised and tracked bug tickets; made small code changes under guidance to fix defects; interacted with the QA team for retesting patches."
+          },
+          {
+            "Name": "Online Order Processing Portal",
+            "Role": "Junior Software Engineer",
+            "Responsibilities": "Assisted in developing a basic order tracking page using JSP and Servlets; integrated simple email notifications for order confirmation; performed database script updates for adding new product categories."
+          }
+        ]
+      },
+      {
+        "Company": "City IT Services",
+        "Duration": "June 2018 – June 2019",
+        "Project": [
+          {
+            "Name": "Helpdesk Ticketing System",
+            "Role": "Trainee Software Engineer",
+            "Responsibilities": "Worked on minor bug fixes related to ticket assignment; added basic search functionality for tickets using SQL queries; prepared weekly reports for open and closed tickets."
+          },
+          {
+            "Name": "Library Book Reservation Portal",
+            "Role": "Trainee Software Engineer",
+            "Responsibilities": "Assisted in adding validation checks on reservation forms; updated frontend styles using CSS; performed basic database query optimization under senior developer supervision."
+          }
+        ]
+      }
+    ],
+    "YearsOfExp": "5.0"
+  }
+}

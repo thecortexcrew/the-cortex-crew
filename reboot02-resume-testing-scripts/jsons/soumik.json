@@ -1,0 +1,105 @@
+{
+  "ApplicantId": "APP20250722-752449VHA",
+  "IdentificationID": "ID20250722-752450S1J",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1987-03-15",
+    "Name": "Soumik Nath",
+    "EmailId": "soumik.nath822@gmail.com",
+    "MobileNo": "9748621059",
+    "Gender": "Male",
+    "YearsOfExp": "15",
+    "Education": [
+      {
+        "Degree": "B-Tech in Computer Science",
+        "Duration": "2006 — 2010",
+        "Ongoing": false,
+        "University": "Academy Of Technology"
+      }
+    ],
+    "SkillSets": {
+      "Architecture & Design": "Microservices Architecture, Event-Driven Architecture, Domain-Driven Design (DDD), REST & GraphQL API Design, Scalable System Design, High Availability Solutions",
+      "Programming & Frameworks": "Java 8+, Spring Boot, Spring Cloud, Spring Security, Spring Batch, Hibernate, iBatis, GraphQL, Angular 8, JavaScript, CSS, Bootstrap",
+      "Cloud & DevOps": "Docker, Kubernetes, OpenShift, Azure, Jenkins CI/CD, UDeploy, Sonar, Checkmarx, Veracode, TFS",
+      "Messaging & Data": "Apache Kafka, MySQL, Oracle, SQL Server, MongoDB",
+      "Security & Compliance": "OWASP, Veracode, Cryptographic Implementations, Secure API Design",
+      "Tools & IDEs": "IntelliJ, Eclipse, STS, VS Code, Git, SVN, Rally, JIRA"
+    },
+    "WorkExp": [
+      {
+        "Company": "Barclays",
+        "Duration": "Jan 2018 — Present",
+        "Role": "Senior Architect - Payment Merchant Services",
+        "Responsibilities": [
+          "Architecting and enhancing enterprise-grade payment processing platforms ensuring scalability and fault tolerance.",
+          "Defined API gateway strategy and improved Spring Security module for secure payment transactions.",
+          "Introduced logging and monitoring framework improvements, enabling proactive issue detection.",
+          "Reviewed and approved system design documents, performed code quality audits, and optimized integration tests.",
+          "Led security remediation for OWASP and Veracode vulnerabilities across payment applications."
+        ],
+        "KeyProjects": [
+          {
+            "Name": "Payment Restful Service (PRS)",
+            "Contribution": "Designed high-performance RESTful APIs for merchant payment services with optimized transaction processing and secure key management."
+          },
+          {
+            "Name": "PayPageST",
+            "Contribution": "Architected multi-tenant payment page customizations and streamlined CI/CD pipelines for rapid deployment."
+          },
+          {
+            "Name": "Card Data Conversion Tool (CDCT)",
+            "Contribution": "Implemented cryptographic enhancements with certificate rotation and secure data encryption pipelines."
+          }
+        ]
+      },
+      {
+        "Company": "Optum (UnitedHealth Group)",
+        "Duration": "Jan 2015 — Dec 2017",
+        "Role": "Technical Lead / Full-Stack Architect",
+        "Responsibilities": [
+          "Owned end-to-end design of healthcare modules integrating Spring Boot microservices with GraphQL APIs.",
+          "Defined event-driven messaging patterns using Apache Kafka for real-time patient data synchronization.",
+          "Guided DevOps automation for Azure-based deployments via Jenkins pipelines."
+        ],
+        "KeyProjects": [
+          {
+            "Name": "Individual Care Plan (ICP)",
+            "Contribution": "Architected secure data flows between patient modules, implemented GraphQL-based data federation for patient care analytics."
+          }
+        ]
+      },
+      {
+        "Company": "Hitachi Consulting",
+        "Duration": "Jan 2014 — Dec 2014",
+        "Role": "Senior Consultant - Back-End Architect",
+        "Responsibilities": [
+          "Enhanced Lumada Data Catalog performance and proposed architectural improvements for big data ingestion pipelines."
+        ]
+      },
+      {
+        "Company": "Deloitte",
+        "Duration": "Jun 2010 — Dec 2013",
+        "Role": "Technology Analyst / Solution Architect (Progressive Roles)",
+        "Responsibilities": [
+          "Designed and developed risk assessment microservices for mortgage scoring models.",
+          "Standardized OpenShift-based containerized deployments for banking applications.",
+          "Defined secure coding practices and mentored teams in Spring Boot microservice patterns."
+        ],
+        "KeyProjects": [
+          "ECB Mortgage Risk Assessment",
+          "ING SRE Site Reliability Engineering",
+          "Open Banking Microservices"
+        ]
+      },
+      {
+        "Company": "Capgemini India Pvt. Ltd.",
+        "Duration": "Aug 2010 — May 2012",
+        "Role": "Associate Consultant / Full-Stack Developer",
+        "Responsibilities": [
+          "Built core banking and capital funding modules with Spring Boot and Angular.",
+          "Established secure data transactions and API-based communication for account and payment management systems."
+        ]
+      }
+    ]
+  }
+}

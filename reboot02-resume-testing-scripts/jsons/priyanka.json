@@ -1,0 +1,75 @@
+{
+    "ApplicantId": "APP20250722-503301AXM",
+    "IdentificationID": "ID20250722-503301YW2",
+    "Profile": {
+        "DateOfApplication": "2025-07-22",
+        "DateOfBirth": "1996-02-27",
+        "Education": [
+            {
+                "Degree": "B-Tech",
+                "Duration": "2015 — 2018",
+                "Ongoing": false,
+                "University": "Camellia Institute Of Technology, Madhyamgram"
+            },
+            {
+                "Degree": "Diploma",
+                "Duration": "2012 — 2015",
+                "Ongoing": false,
+                "University": "Women's Polytechnic Jodhpur Park"
+            },
+            {
+                "Degree": "Higher Secondary",
+                "Duration": "2010 — 2012",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            },
+            {
+                "Degree": "Secondary School",
+                "Duration": "2009 — 2010",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            }
+        ],
+        "EmailId": "priyankabanerjee206@gmail.com",
+        "Gender": "",
+        "MobileNo": "+91 8910983449",
+        "Name": "PRIYANKA BANERJEE",
+        "SkillSets": "CORE JAVA 8, SPRING BOOT, MICROSERVICES, REACTIVE PROGRAMMING, HIBERNATE, DATA STRUCTURES & ALGORITHMS, SQL, ANGULAR 8, REACT, BOOTSTRAP, DOCKER, KUBERNETES, GCP, AZURE(AZ-900), CONFLUENT KAFKA, BIG QUERY, CLOUD RUN, CLOUD BUILD. TOOLS : ECLIPSE, STS, INTELLIJ, MYSQL WORKBENCH, MAVEN, BAMBOO, JENKINS, POSTMAN",
+        "WorkExp": [
+            {
+                "Company": "Lloyds Technology Centre",
+                "Duration": "January 2023 - Present",
+                "Project": [
+                    {
+                        "Name": "Co-Service Initiative & Cloud Modernization",
+                        "Responsibilities": "End-to-end involvement in requirement gathering, design discussions, and active co-implementation with the team for a critical initiative named Co-Service. Created a high-performance Google Dataflow test-data generation job capable of loading billions of records into Spanner without primary key duplication, enabling performance and functionality testing of other Dataflow pipelines. Actively co-implementing with team in migrating old monolith stack to GCP Microservices stack with a tight SLA of 500ms response time. Optimized reactive Java Microservices using Spring Boot with MDC-based logging enhancements. Extensively worked with Google Cloud Platform services like Dataflow, Spanner, Storage Buckets, GKE, and TM-Vault. Participated in internal hackathons, achieving Top-15 position, and explored Cloud Run, Cloud Build, IAM Policies, Service Accounts, Kafka Connect, JSON Key rotations, and Big Query integrations.",
+                        "Role": "Software Developer"
+                    }
+                ]
+            },
+            {
+                "Company": "Infosys",
+                "Duration": "June 2019 — December 2022",
+                "Project": [
+                     {
+                        "Name": "WDP Core Banking",
+                        "Responsibilities": "Migration of Account Dashboard service into a Microservice using Spring Boot, Hibernate, and Microservices architecture. Published personal accounts data in dashboard UI using Angular 8, Bootstrap, CSS, and HTML. Enhanced existing mortgage loan applications using Core Java 8, Spring Boot, and Spring Data JPA, and added multiple banking modules using REST API, Hibernate, and Microservices best practices.",
+                        "Role": "Senior Systems Engineer"
+                    },
+  {
+                        "Name": "Mesh Migration",
+                        "Responsibilities": "As a Senior Software Engineer, migrated existing On-prem Kafka ecosystem to Confluent Cloud aligned with Azure. Designed and implemented CI/CD pipelines, containerized Microservices using Kubernetes, and enforced secure DevOps practices during migration.",
+                        "Role": "Senior Systems Engineer"
+                    },
+                    {
+                        "Name": "Strategic Billing",
+                        "Responsibilities": "Worked as part of full-stack development team using Angular and React for billing dashboards and Spring Boot-based Microservices. Designed and developed a Simulator using Spring Boot and batch processing concepts to generate real-time user usage data to test critical functionalities of the main billing system.",
+                        "Role": "Systems Engineer"
+                    }
+
+                ]
+            }
+        ],
+        "YearsOfExp": "5"
+    }
+}

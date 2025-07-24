@@ -1,0 +1,93 @@
+{
+  "ApplicantId": "APP20250722-TOTAL-NEGATIVE",
+  "IdentificationID": "ID20250722-TOTAL-NEGATIVE",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1997-03-11",
+    "Education": [
+      {
+        "Degree": "B.Sc in Computer Applications",
+        "Duration": "2016 — 2019",
+        "Ongoing": false,
+        "University": "Regional College of Science and IT"
+      },
+      {
+        "Degree": "Higher Secondary",
+        "Duration": "2014 — 2016",
+        "Ongoing": false,
+        "University": "ABC Senior Secondary School"
+      }
+    ],
+    "EmailId": "basic.support@example.com",
+    "Gender": "Male",
+    "MobileNo": "+91 9876501234",
+    "Name": "ARJUN KUMAR",
+    "SkillSets": "BASIC JAVA, JSP, SERVLETS, HTML, CSS, JAVASCRIPT, BASIC SQL QUERIES, WINDOWS SERVER MONITORING, SIMPLE SHELL SCRIPTING, POSTMAN, MS EXCEL",
+    "WorkExp": [
+      {
+        "Company": "HelpTech Solutions",
+        "Duration": "Jan 2023 - Present",
+        "Project": [
+          {
+            "Name": "Internal Ticketing Tool Support",
+            "Role": "Support Engineer",
+            "Responsibilities": "Handled basic L1/L2 support for an internal ticketing system; created and updated tickets; restarted services on server alerts; coordinated with senior engineers for escalations; no involvement in automation or CI/CD activities."
+          },
+          {
+            "Name": "Basic Payroll Portal Issue Fixes",
+            "Role": "Support Engineer",
+            "Responsibilities": "Resolved minor payroll data display issues in JSP pages; updated static help documentation; coordinated with HR team for manual data corrections."
+          },
+          {
+            "Name": "User Access Request Tracker",
+            "Role": "Support Engineer",
+            "Responsibilities": "Monitored access requests submitted via Excel sheets; manually updated user access in Active Directory; followed predefined checklist for approvals."
+          }
+        ]
+      },
+      {
+        "Company": "CitySoft Pvt Ltd",
+        "Duration": "July 2020 - Dec 2022",
+        "Project": [
+          {
+            "Name": "Basic Web Portal Maintenance",
+            "Role": "Junior Software Support",
+            "Responsibilities": "Performed routine bug fixes in JSP pages; updated static content on the company website; modified simple SQL queries for generating monthly reports; no design or architectural responsibilities."
+          },
+          {
+            "Name": "Employee Directory Update",
+            "Role": "Junior Software Support",
+            "Responsibilities": "Updated employee photos and contact details in the company intranet; fixed alignment issues on directory pages; coordinated with HR to validate data."
+          },
+          {
+            "Name": "Simple Contact Form Validation",
+            "Role": "Junior Software Support",
+            "Responsibilities": "Added basic frontend validations for contact forms using JavaScript; tested manually in multiple browsers; provided documentation to QA team."
+          }
+        ]
+      },
+      {
+        "Company": "TechCall Services",
+        "Duration": "Aug 2019 - June 2020",
+        "Project": [
+          {
+            "Name": "Windows Server Monitoring",
+            "Role": "IT Support Associate",
+            "Responsibilities": "Monitored CPU and memory usage for Windows servers; raised alerts for resource utilization; manually rebooted servers as per instructions; maintained MS Excel sheets for daily server health status."
+          },
+          {
+            "Name": "Printer Queue Management",
+            "Role": "IT Support Associate",
+            "Responsibilities": "Cleared stuck printer queues; installed basic printer drivers; assisted end users with printer connectivity issues; documented recurring problems in Excel logs."
+          },
+          {
+            "Name": "Outlook Email Configuration",
+            "Role": "IT Support Associate",
+            "Responsibilities": "Assisted employees in setting up Outlook email accounts; reset passwords on request; escalated major issues to senior admins; maintained weekly report of support calls."
+          }
+        ]
+      }
+    ],
+    "YearsOfExp": "4.5"
+  }
+}

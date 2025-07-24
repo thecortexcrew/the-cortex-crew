@@ -1,0 +1,74 @@
+{
+    "ApplicantId": "APP20250722-21395258X",
+    "IdentificationID": "ID20250722-213952GAQ",
+    "Profile": {
+        "DateOfApplication": "2025-07-22",
+        "DateOfBirth": "1996-02-27",
+        "Education": [
+            {
+                "Degree": "B-Tech",
+                "Duration": "2018 — 2021",
+                "Ongoing": false,
+                "University": "Camellia Institute Of Technology, Madhyamgram"
+            },
+            {
+                "Degree": "Diploma",
+                "Duration": "2014 — 2017",
+                "Ongoing": false,
+                "University": "Women's Polytechnic Jodhpur Park"
+            },
+            {
+                "Degree": "Higher Secondary",
+                "Duration": "2012 — 2014",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            },
+            {
+                "Degree": "Secondary School",
+                "Duration": "2011 — 2012",
+                "Ongoing": false,
+                "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+            }
+        ],
+        "EmailId": "priyankabanerjee206@gmail.com",
+        "Gender": "",
+        "MobileNo": "+91 8910983449",
+        "Name": "PRIYANKA BANERJEE",
+        "SkillSets": "CORE JAVA 8, SPRING BOOT, MICROSERVICES, HIBERNATE, DATA STRUCTURES & ALGORITHMS, SQL, ANGULAR 8, BOOTSTRAP, DOCKER, KUBERNETES, GCP, AZURE(AZ-900). TOOLS : ECLIPSE, STS, INTELLIJ, MYSQL WORKBENCH, MAVEN, BAMBOO, JENKINS, POSTMAN",
+        "WorkExp": [
+            {
+                "Company": "Lloyds Technology Centre",
+                "Duration": "June 2024 - Present",
+                "Project": [
+                    {
+                        "Name": "",
+                        "Responsibilities": "Involved in migration of on-prem confluent Kafka to GCP confluent cloud.\nMaintaining and adding new features to the backend services which serves as backend for mobile application.",
+                        "Role": "Software Developer"
+                    }
+                ]
+            },
+            {
+                "Company": "Infosys",
+                "Duration": "September 2021 — May 2024",
+                "Project": [
+                    {
+                        "Name": "Strategic Billing",
+                        "Responsibilities": "Involved in end-to-end development of building the prototype for an enterprise level billing system.",
+                        "Role": "Senior Systems Engineer"
+                    },
+                    {
+                        "Name": "Mesh Migration",
+                        "Responsibilities": "Involved in shifting deployment from on-premise servers to public cloud, where microservices are containerized and deployed in Kubernetes clusters using CICD pipeline with DevOps practices being maintained.",
+                        "Role": "Senior Systems Engineer"
+                    },
+                    {
+                        "Name": "WDP Core Banking",
+                        "Responsibilities": "Migration of Account Dashboard service into a microservice using Spring Boot, Hibernate and Microservices architecture.\nPublishing Personal Accounts data in Dashboard UI using Angular 8, Bootstrap, CSS and HTML.\nEnhancing existing Mortgage loan application using Core Java 8, Spring Boot and Spring Data JPA.\nAdding/enhancing different core banking modules using Core Java 8, REST API, Spring Boot, Hibernate, Spring data JPA and Microservices concepts.",
+                        "Role": "Senior Systems Engineer"
+                    }
+                ]
+            }
+        ],
+        "YearsOfExp": "3.5"
+    }
+}

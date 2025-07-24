@@ -1,0 +1,74 @@
+{
+  "ApplicantId": "APP20250722-21395258X",
+  "IdentificationID": "ID20250722-213952GAQ",
+  "Profile": {
+    "DateOfApplication": "2025-07-22",
+    "DateOfBirth": "1990-02-27",
+    "Education": [
+      {
+        "Degree": "B-Tech",
+        "Duration": "2012 — 2015",
+        "Ongoing": false,
+        "University": "Camellia Institute Of Technology, Madhyamgram"
+      },
+      {
+        "Degree": "Diploma",
+        "Duration": "2009 — 2012",
+        "Ongoing": false,
+        "University": "Women's Polytechnic Jodhpur Park"
+      },
+      {
+        "Degree": "Higher Secondary",
+        "Duration": "2007 — 2009",
+        "Ongoing": false,
+        "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+      },
+      {
+        "Degree": "Secondary School",
+        "Duration": "2005 — 2007",
+        "Ongoing": false,
+        "University": "Ariadaha Sarbomongola Balika Vidyalaya"
+      }
+    ],
+    "EmailId": "priyankabanerjee206@gmail.com",
+    "Gender": "",
+    "MobileNo": "+91 8910983449",
+    "Name": "PRIYANKA BANERJEE",
+    "SkillSets": "DESIGN-PATTERNS, SOLUTION DESIGN, CLOUD BASED ARCHITECTURES, LOW LEVEL DESIGNS, HIGH LEVEL DESIGNS, DISTRIBUTED SYSTEMS, AZURE, AWS, GCP, CORE JAVA 8, SPRING BOOT, MICROSERVICES, HIBERNATE, DATA STRUCTURES & ALGORITHMS, SQL, ANGULAR 8, BOOTSTRAP, DOCKER, KUBERNETES. TOOLS : ECLIPSE, STS, INTELLIJ, MYSQL WORKBENCH, MAVEN, BAMBOO, JENKINS, POSTMAN",
+    "WorkExp": [
+      {
+        "Company": "Lloyds Technology Centre",
+        "Duration": "June 2024 - Present",
+        "Project": [
+          {
+            "Name": "Confluent Kafka Cloud Migration & Mobile Backend Optimization",
+            "Role": "Head Solution Architect",
+            "Responsibilities": "Designed and led the migration of on-premise Confluent Kafka clusters to GCP Confluent Cloud ensuring minimal downtime and high data throughput; defined event-driven architecture patterns for scalable messaging; optimized backend microservices supporting mobile applications for better fault tolerance, improved response times, and seamless feature rollouts across distributed systems."
+          }
+        ]
+      },
+      {
+        "Company": "Infosys",
+        "Duration": "September 2014 — May 2024",
+        "Project": [
+          {
+            "Name": "Strategic Billing Modernization",
+            "Role": "Senior Systems Engineer",
+            "Responsibilities": "Designed and proposed a scalable microservices-based architecture for the next-generation enterprise billing system; led POC development focusing on high availability and performance optimization; defined service boundaries, API contracts, and data migration strategy from legacy monolithic systems."
+          },
+          {
+            "Name": "Mesh Migration - Cloud Transformation",
+            "Role": "Senior Systems Engineer",
+            "Responsibilities": "Architected the migration strategy for critical banking applications from on-premise servers to Kubernetes-based public cloud; defined CI/CD pipelines and infrastructure-as-code standards for automated deployments; optimized container orchestration for cost efficiency and ensured compliance with banking security standards."
+          },
+          {
+            "Name": "WDP Core Banking Platform",
+            "Role": "Senior Systems Engineer",
+            "Responsibilities": "Redesigned the Account Dashboard service into a distributed microservice aligned with domain-driven design principles, improving response times by 40%; standardized service communication patterns (REST + async messaging); introduced caching and database optimization strategies; mentored junior developers on clean architecture and Spring Boot best practices."
+          }
+        ]
+      }
+    ],
+    "YearsOfExp": "10.5"
+  }
+}
