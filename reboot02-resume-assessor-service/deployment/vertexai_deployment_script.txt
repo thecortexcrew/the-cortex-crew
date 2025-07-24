@@ -1,0 +1,38 @@
+# Docker build
+docker buildx build  --platform=linux/amd64   --load   -t us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resume-assessor-service:latest  .
+
+# Docker push
+docker push us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resume-assessor-service:latest
+
+# Enable required APIs
+gcloud services enable compute.googleapis.com \
+                       aiplatform.googleapis.com \
+                       artifactregistry.googleapis.com \
+                       containerregistry.googleapis.com
+
+# Upload model to VertexAI
+gcloud ai models upload \
+  --region=us-central1 \
+  --display-name=resume-assessor-service-model-v1 \
+  --container-predict-route="/" \
+  --container-health-route="/health" \
+  --container-image-uri=us-central1-docker.pkg.dev/ltc-reboot25-team-39/application-repo/resume-assessor-service:latest \
+  --container-ports=8080
+
+# Create ENDPOINT_ID
+gcloud ai endpoints create \
+  --project=ltc-reboot25-team-39 \
+  --region=us-central1 \
+  --display-name=resume-assessor-service-model-v1
+
+# Find Model ID by latest order of creation timestamp
+gcloud ai models list --region=us-central1 --sort-by=~createTime
+
+# Deploy model to VertexAI
+  gcloud ai endpoints deploy-model 2047304944570073088 \
+  --region=us-central1 \
+  --model=4974844813477150720 \
+  --display-name=resume-assessor-service-model-v1 \
+  --machine-type=n1-standard-8\
+  --traffic-split=0=100 \
+  --service-account=hireassist-resource-001@ltc-reboot25-team-39.iam.gserviceaccount.com

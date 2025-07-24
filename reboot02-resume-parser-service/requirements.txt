@@ -1,0 +1,9 @@
+Flask
+gunicorn
+pdfplumber
+spacy
+python-dotenv
+google-generativeai
+python-dateutil
+flask-cors
+google-cloud-aiplatform[generative]>=1.5.0

@@ -1,0 +1,23 @@
+# Web Framework & Server
+flask
+gunicorn
+requests
+
+# Environment & Config
+python-dotenv
+
+# Google Cloud & AI
+google-generativeai
+google-cloud-aiplatform[generative]>=1.50.0 # Includes Vertex AI SDK
+
+# NLP & Data Processing
+sentence-transformers
+torch # Required by sentence-transformers
+numpy
+pandas
+Jinja2
+
+# Hugging Face repo
+huggingface_hub
+
+# Others
