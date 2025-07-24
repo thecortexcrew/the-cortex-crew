@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume-proxy-api
+spec:
+  selector:
+    app: resume-proxy-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8083
+  type: ClusterIP

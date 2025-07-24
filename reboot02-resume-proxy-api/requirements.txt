@@ -1,0 +1,9 @@
+flask
+fastapi
+python-multipart
+google-auth
+requests
+python-dotenv
+gunicorn
+uvicorn[standard]
+httpx[http2]

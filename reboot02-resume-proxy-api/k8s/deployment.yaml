@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-proxy-api
+  labels:
+    app: resume-proxy-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resume-proxy-api
+  template:
+    metadata:
+      labels:
+        app: resume-proxy-api
+    spec:
+      serviceAccountName: vertexai-service-account
+      containers:
+        - name: resumeproxy
+          image: us-central1-docker.pkg.dev/hireassist-465713/application-repo/resumeproxyapi:latest
+          ports:
+            - containerPort: 8083
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+          env:
+            - name: APP_PORT
+              value: "8083"
+          #   - name: SASL_USERNAME
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: SASL_USERNAME
+          #   - name: SASL_PASSWORD
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: SASL_PASSWORD
+          #   - name: BUCKET_NAME
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: producer-secrets
+          #         key: BUCKET_NAME
