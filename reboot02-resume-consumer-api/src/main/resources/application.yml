@@ -1,0 +1,61 @@
+server:
+  port: 9080
+  servlet:
+    context-path: /resume-consumer-api/v1.0
+spring:
+  cloud:
+    function:
+      definition: input
+    stream:
+      bindings:
+        input-in-0:
+          destination: resume_assessor_topic_0 # topic created in confluent platform with partition count of 3
+          group: group_assessor
+          content-type: application/json
+          binder: kafka
+          consumer:
+            batch-mode: true
+            concurrency: 3 # parallel message consumption for the 3 partitions of the topic
+            max-attempts: 3 # 3 retries to be made for a successful consumption
+            auto-startup: true
+            backoff-initial-interval: 2000 # after 2s the 1st retry will be attempted if unable to consume from topic
+            back-off-multiplier: 2.0 # 2s -> 4s ->8s
+#            enable-dlq: true
+#            dlq-name: dlq-lcc-jn0gzq # If still fails to consume after max no. of attempts message will move to dlq topic
+#        dltInput-in-0:
+#          destination: dlq-lcc-jn0gzq
+#          group: dlq-handler-group
+      kafka:
+        binder:
+          # Confluent broker server
+          brokers: pkc-619z3.us-east1.gcp.confluent.cloud:9092
+          autoCreateTopics: false
+          consumer-properties:
+            key.deserializer: io.confluent.kafka.serializers.json.KafkaJsonSchemaDeserializer
+            value.deserializer: io.confluent.kafka.serializers.json.KafkaJsonSchemaDeserializer
+            schema.registry.url: https://psrc-v1593j.us-central1.gcp.confluent.cloud
+            basic.auth.credentials.source: USER_INFO
+            basic.auth.user.info: "D6SUFQYVZZDDUMPM:AtMcIi3qj8xznPbSD3hdX64m7TYKAiAycxtqwCb9BOeHX+RSRqjKf+UBumQ8540t"
+            specific.json.reader: true
+            auto.offset.reset: earliest
+            enable.auto.commit: true # kafka will not autocommit offsets periodically(every 5 seconds) and let spring cloud stream autocommit
+            # after Consumer Function processes the message without throwing any exception
+            # batch consumption properties
+            fetch.max.wait.ms: 20000 # consumer will wait for 20 seconds before consuming fromm topic(can change the value later)
+            max.poll.records: 10 # batch size of one slot of message
+            fetch.min.bytes: 1048576 # minimum size of the data broker needs to accumulate before allowing consumer to consume from topic
+            max.poll.interval.ms: 120000 # maximum delay between consumption of 2 batches
+          # Confluent cluster security configuration
+          configuration:
+            security.protocol: SASL_SSL
+            sasl.mechanism: PLAIN
+            sasl.jaas.config: >
+              org.apache.kafka.common.security.plain.PlainLoginModule required
+              username="BK5ONDTNAXG5ESHP" password="eXah6M+x9rMwOss5wAUivPxwMAsaLv9LwN2re0GkPOHeQ+93k8oZmozZiFvZ8EKl";
+
+config:
+  web-client:
+    time-out: 150000
+    max-buffer-size: 500 * 1024
+  consumer:
+    batch-delay-ms: 300000
