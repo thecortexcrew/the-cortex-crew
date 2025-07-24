@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  labels:
+    app: hireassist-producer
+  namespace: default
+data:
+  BOOTSTRAP_SERVERS: {{ .Values.kafka.bootstrapServers }}
+  BUCKET_NAME: {{ .Values.bucket.name }}
